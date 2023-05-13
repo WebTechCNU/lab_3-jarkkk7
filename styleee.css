@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 200;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1em;
+    font-family: segoe ui, helvetica neue, helvetica, arial, sans-serif;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+
+  
+  /* Defaults */
+  body {
+    font-size: 16px;
+    background: #fafdff;
+  }
+  
+  h1 {
+    font-size: 180%;
+    color: #fff;
+  }
+  h2 {
+    font-size: 160%;
+    color: #514c4c;
+    padding-bottom: 15px;
+  }
+  
+  h3 {
+    font-size: 120%;
+    color: #5b5959;
+    padding-bottom: 15px;
+  }
+  img {
+    height: auto;
+    width: 20%;
+  }
+  
+  
+  
+  p a, li a, h1 a, p span {
+    color: ivory;
+    font-size: inherit;
+  }
+  
+  p a {
+    color: #48C7C1;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  p.tags {
+    padding-top: 10px;
+  }
+  
+ 
+  
+  .wrapper {
+    width: 960px;
+    margin: 0px auto;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  
+
+  
+  /* Header */
+  .header {
+    height: 100px;
+    border-top: 5px solid #48c7c15a;
+    background: #222;
+    margin-bottom: 30px;
+  }
+  
+  .header .wrapper {
+    margin-top: -5px;
+  }
+  
+  .header h1 {
+    float: left;
+    line-height: 120px;
+    background: #48c7c100;
+    padding: 0px 30px 0px 30px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 2px 2px;
+  }
+  
+  .header ul {
+    float: right;
+    overflow: hidden;
+  }
+  
+  .header ul li {
+    float: left;
+  }
+  
+  .header ul li a {
+    display: block;
+    line-height: 100px;
+    padding: 0px 30px 0px 30px;
+    color: #999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header ul li a:hover {
+    background: rgba(0, 0, 0, 0.2);
+    color: #ccc;
+  }
+  
+  /* Wrapper Sections */
+  .wrapper.container {
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 2px;
+  }
+  
+  .wrapper.footer {
+    background: #222;
+    padding: 30px;
+    border-radius: 2px 2px 0px 0px;
+  }
+  
+  .wrapper.footer ul li a {
+    color: #999;
+  }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-md-6 {
+    width: 100%;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 10px 20px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>lab</title>
+    <link rel="icon" type="image/png" href="https://www.shutterstock.com/image-vector/yarrow-flower-vector-illustration-scientific-260nw-2240957775.jpg" >
+    <link href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" rel="stylesheet">
+    <link rel="stylesheet" href="./stylee.css">
+</head>
+<body>
+   
+    <header>
+        <div class="overlay">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home↩</a>
+                    </li>
+                    <li class="cart">
+                        <a href="products.html">
+                            <ion-icon name="basket"></ion-icon><h2>Basket</h2><span id="cart-items-count"> 0 </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <select class="price-sorting type-regular" name="price-sorting" onchange="sortProducts()">
+        <option value="normal">Normal</option>
+        <option value="l2h">From lower to higher</option>
+        <option value="h2l">From higher to lower</option>
+    </select>
+
+
+<div class="container" id="container">
+
+    <div class="image" data- price="340">
+        <img src="mediaa/1.jpg" alt="">
+        <h3 class="name">Mother's Day Bouquet</h3>
+        <h3 class="product_price">£30-50(в залежності від розміру)</h3>
+        <a  class="add-cart cart1">Add to basket</a>
+
+    </div>
+    <div class="image" data-price="330">
+        <img src="mediaa/2.jpg" alt="">
+        <h3 class="name">Bouquet 2</h3>
+        <h3 class="product_price">£33</h3>
+        <a  class="add-cart cart2">Add to basket</a>
+
+    </div>
+    <div class="image" data-price="370">
+        <img src="mediaa/3.jpg" alt="">
+        <h3 class="name">Bouquet 3</h3>
+        <h3 class="product_price">£37</h3>
+        <a  class="add-cart cart1">Add to basket</a>
+    </div>
+    <div class="image" data-price="320">
+        <img src="mediaa/4.jpg" alt="">
+        <h3 class="name">Bouquet 4</h3>
+        <h3 class="product_price">£30,670</h3>
+        <a  class="add-cart cart1">Add to basket</a>
+
+    </div>
+    <div class="image" data-price="310">
+        <img src="mediaa/5.jpg" alt="">
+        <h3 class="name">Bouquet 5</h3>
+        <h3 class="product_price">£30,400</h3>
+        <a  class="add-cart cart1">Add to basket</a>
+
+    </div>
+    <div class="image" data-price="400">
+        <img src="mediaa/6.jpg" alt="">
+        <h3 class="name">Bouquet 6</h3>
+        <h3 class="product_price">£40</h3>
+        <a  class="add-cart cart1">Add to basket</a>
+
+    </div>
+    <div class="image" data-price="410">
+        <img src="mediaa/7.jpg" alt="">
+        <h3 class="name">Bouquet 7</h3>
+        <h3 class="product_price">£41</h3>
+        <a  class="add-cart cart1">Add to basket</a>
+
+    </div>
+    <div class="image" data-price="340">
+        <img src="mediaa/11.jpg" alt="">
+        <h3 class="name">Bouquet 8 </h3>
+        <h3 class="product_price">£33,690</h3>
+        <a  class="add-cart cart1">Add to basket</a>
+
+    </div>
+    <div class="image" data-price="360">
+        <img src="mediaa/12.jpg" alt="">
+        <h3 class="name">Bouquet 9</h3>
+        <h3 class="product_price">£36</h3>
+        <a  class="add-cart cart1">Add to basket</a>
+
+    </div>
+    <script>
+        const selectElement = document.querySelector('.price-sorting');
+  const container = document.querySelector('#container');
+  let images = [...document.querySelectorAll('.image')];
+
+  selectElement.addEventListener('change', (event) => {
+    const value = event.target.value;
+    switch (value) {
+      case 'h2l':
+        images.sort((a, b) => b.dataset.price - a.dataset.price);
+        break;
+      case 'l2h':
+        images.sort((a, b) => a.dataset.price - b.dataset.price);
+        break;
+      default:
+        images = [...document.querySelectorAll('.image')];
+        break;
+    }
+    images.forEach((image) => container.appendChild(image));
+  });
+    </script>
+   
+</div>
+
+
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+
+</body>
+
+</html>
